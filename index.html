@@ -3,309 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>When Work Changes | AI & Professional Identity Research | Aotearoa NZ</title>
-<meta name="description" content="Research into what AI-driven role change does to communications professionals in Aotearoa. If your work is changing and you're wondering who you are now — this is for you.">
-<meta property="og:title" content="When Work Changes — Research for Communications Professionals in Aotearoa">
-<meta property="og:description" content="AI feels different, doesn't it. Not just in what you do — in who you are at work. A research study into professional identity disruption during AI-driven role change in NZ.">
+<title>When Work Changes | AI and Professional Identity | Aotearoa NZ</title>
+<meta name="description" content="Exploring how AI is shifting the future of work for communications professionals in New Zealand. A research study on career transition and identity.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<style>
-:root {
-  --black: #111111;
-  --black-soft: #181818;
-  --black-card: #1e1e1e;
-  --black-border: #2a2a2a;
-  --gold: #D4A847;
-  --gold-dim: #a07d2a;
-  --gold-pale: rgba(212,168,71,0.07);
-  --gold-line: rgba(212,168,71,0.3);
-  --white: #ffffff;
-  --white-70: rgba(255,255,255,0.7);
-  --white-45: rgba(255,255,255,0.45);
-  --white-20: rgba(255,255,255,0.2);
-  --white-08: rgba(255,255,255,0.08);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
-nav.scrolled{background:rgba(17,17,17,.95);border-color:var(--black-border);backdrop-filter:blur(16px)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.03em}
-.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
-.nav-links a{color:var(--white-45);text-decoration:none;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{color:var(--gold)!important;border:1px solid var(--gold-line)!important;padding:.45rem 1.1rem;transition:background .2s,color .2s!important}
-.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important}
-
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 6rem;position:relative;overflow:hidden}
-.hero-canvas{position:absolute;inset:0;pointer-events:none}
-.hero-content{max-width:820px;position:relative;z-index:2;animation:fadeUp .9s ease .1s both}
-.hero-eyebrow{font-size:.72rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:2rem;display:flex;align-items:center;gap:.8rem}
-.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
-.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:400;line-height:1.05;margin-bottom:1rem;color:var(--white)}
-.hero-headline em{color:var(--gold);font-style:italic}
-.hero-sub{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--white-70);line-height:1.8;max-width:540px;margin:2rem 0 3rem;font-weight:300}
-.btn-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--black);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:background .2s,transform .2s}
-.btn-gold:hover{background:#e0b852;transform:translateX(3px)}
-.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;transition:border-color .2s,background .2s}
-.btn-ghost:hover{border-color:var(--gold);background:var(--gold-pale)}
-
-/* STATS */
-.stats{background:var(--black-soft);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border);padding:4rem 3rem}
-.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.stat{padding:0 2.5rem;border-right:1px solid var(--black-border)}
-.stat:first-child{padding-left:0}
-.stat:last-child{border-right:none}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:600;color:var(--gold);line-height:1;margin-bottom:.75rem}
-.stat-text{font-size:.88rem;color:var(--white-70);line-height:1.65;font-weight:300}
-.stat-source{font-size:.65rem;color:var(--white-20);margin-top:.6rem;letter-spacing:.05em;text-transform:uppercase}
-
-/* SECTIONS */
-.section{padding:7rem 3rem}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-label{font-size:.7rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
-.section-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
-.section-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:400;line-height:1.15;margin-bottom:1.5rem;color:var(--white)}
-.section-heading em{color:var(--gold);font-style:italic}
-.body-text{font-size:1rem;color:var(--white-70);line-height:1.8;font-weight:300;max-width:680px}
-.body-text em{color:var(--white);font-style:italic}
-
-/* ARGUMENT */
-.arg-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--black-border);margin-top:4rem}
-.arg-block{background:var(--black);padding:3rem 2.5rem;position:relative;transition:background .25s;overflow:hidden}
-.arg-block:hover{background:var(--black-card)}
-.arg-accent{position:absolute;top:0;left:0;width:2px;height:0;background:var(--gold);transition:height .4s ease}
-.arg-block:hover .arg-accent{height:100%}
-.arg-num{font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--black-border);font-weight:600;line-height:1;margin-bottom:1.5rem;transition:color .25s}
-.arg-block:hover .arg-num{color:var(--gold-dim)}
-.arg-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.3}
-.arg-body{font-size:.9rem;color:var(--white-45);line-height:1.75;font-weight:300}
-
-/* QUOTE */
-.quote-section{background:var(--black-soft);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border);padding:6rem 3rem;text-align:center}
-.pull-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.4rem);font-style:italic;font-weight:400;color:var(--white-70);max-width:700px;margin:0 auto 1.5rem;line-height:1.5}
-.pull-quote em{color:var(--gold);font-style:normal}
-.pull-attr{font-size:.72rem;color:var(--white-20);letter-spacing:.15em;text-transform:uppercase}
-
-/* NZ */
-.nz-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:6rem;align-items:start;margin-top:4rem}
-.nz-stat-large{font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,8vw,7rem);font-weight:600;color:var(--gold);line-height:1;margin-bottom:.5rem}
-.nz-stat-label{font-size:.88rem;color:var(--white-45);line-height:1.65;font-weight:300;max-width:280px;margin-bottom:.5rem}
-.nz-stat-source{font-size:.65rem;color:var(--white-20);letter-spacing:.07em;text-transform:uppercase}
-.nz-divider{border:none;border-top:1px solid var(--black-border);margin:2.5rem 0}
-
-/* GAP */
-.gap-section{background:var(--black-soft)}
-.gap-callout{border-left:2px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--white-70);line-height:1.55}
-.gap-callout em{color:var(--gold);font-style:normal}
-
-/* CTA */
-.cta-section{background:var(--black);border-top:1px solid var(--black-border);padding:8rem 3rem;text-align:center}
-.cta-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.2}
-.cta-sub{font-size:1rem;color:var(--white-45);max-width:440px;margin:0 auto 2.5rem;line-height:1.75;font-weight:300}
-.cta-buttons{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-
-/* FOOTER */
-footer{background:var(--black-soft);border-top:1px solid var(--black-border);padding:4rem 3rem 2.5rem}
-.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--black-border)}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;display:block;text-decoration:none}
-.footer-tag{font-size:.82rem;color:var(--white-20);line-height:1.7;font-weight:300;max-width:300px}
-.footer-col-title{font-size:.68rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:400}
-.footer-links{list-style:none}
-.footer-links li+li{margin-top:.6rem}
-.footer-links a{color:var(--white-45);text-decoration:none;font-size:.85rem;font-weight:300;transition:color .2s}
-.footer-links a:hover{color:var(--gold)}
-.footer-contact{font-size:.85rem;color:var(--white-45);line-height:1.8;font-weight:300}
-.footer-contact a{color:var(--gold);text-decoration:none}
-.footer-bottom{max-width:1100px;margin:2rem auto 0;text-align:center;font-size:.7rem;color:var(--white-20);font-weight:300;letter-spacing:.04em}
-
-/* REVEAL */
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-d1{transition-delay:.1s}
-.reveal-d2{transition-delay:.2s}
-
-/* MOBILE */
-@media(max-width:768px){
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .hero{padding:7rem 1.5rem 5rem}
-  .section{padding:5rem 1.5rem}
-  .stats{padding:3rem 1.5rem}
-  .stats-inner{grid-template-columns:1fr;gap:0}
-  .stat{padding:2rem 0;border-right:none;border-bottom:1px solid var(--black-border)}
-  .stat:first-child{padding-top:0}
-  .stat:last-child{border-bottom:none}
-  .arg-grid{grid-template-columns:1fr}
-  .nz-grid{grid-template-columns:1fr;gap:3rem}
-  .footer-inner{grid-template-columns:1fr;gap:2rem}
-  .cta-section{padding:5rem 1.5rem}
-  .quote-section{padding:4rem 1.5rem}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 6rem;background:var(--black)}
+.hero-content{max-width:820px;animation:fadeUp .9s ease .1s both}
+.hero-eyebrow{font-size:.7rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:2rem;display:flex;align-items:center;gap:.8rem}
+.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:.8rem}
+.hero-headline em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--w70);line-height:1.8;max-width:560px;margin:1.8rem 0 2.8rem;font-weight:300}
+.stat-callout{border-left:2px solid var(--gold);padding:.8rem 1.5rem;margin:3rem 0;font-size:.9rem;color:var(--w45);font-weight:300;line-height:1.6;max-width:580px}
+.stat-callout strong{color:var(--gold);font-weight:500}
+.voice-block{background:var(--black-soft);border:1px solid var(--black-border);padding:2.5rem;margin:3rem 0;max-width:680px}
+.voice-block p{font-size:1rem;color:var(--w70);line-height:1.85;font-weight:300}
+.voice-block p+p{margin-top:1rem}
+.voice-attr{font-size:.72rem;color:var(--w20);letter-spacing:.12em;text-transform:uppercase;margin-top:1.2rem}
+.fracture-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;color:var(--white);margin-bottom:1.2rem;line-height:1.2}
+.fracture-heading em{color:var(--gold);font-style:italic}
+@media(max-width:768px){.hero{padding:7rem 1.5rem 5rem}}
+</style>
 </head>
 <body>
-
 <nav id="nav">
   <a href="index.html" class="nav-logo">When Work Changes</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="get-involved.html">Get Involved</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">The Research</a></li>
-    <li><a href="get-involved.html" class="nav-cta">Participate →</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="proposal.html">The Research</a></li>
+    <li><a href="get-involved.html" class="nav-cta">Participate</a></li>
   </ul>
 </nav>
 
 <section class="hero">
-  <svg class="hero-canvas" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="900" cy="450" r="380" stroke="rgba(255,255,255,0.025)" stroke-width="1" fill="none"/>
-    <circle cx="900" cy="450" r="250" stroke="rgba(255,255,255,0.015)" stroke-width="1" fill="none"/>
-    <path d="M700 120 Q760 280 720 420 Q680 560 740 680 Q800 780 860 860" stroke="#D4A847" stroke-width="1.5" fill="none" opacity="0.3"/>
-    <path d="M820 180 Q880 320 840 460 Q800 580 880 700" stroke="#D4A847" stroke-width="1" fill="none" opacity="0.18"/>
-    <path d="M620 300 Q700 350 740 420" stroke="#D4A847" stroke-width="1" fill="none" opacity="0.12"/>
-    <circle cx="720" cy="420" r="3" fill="#D4A847" opacity="0.35"/>
-    <circle cx="740" cy="680" r="2" fill="#D4A847" opacity="0.25"/>
-  </svg>
-
   <div class="hero-content">
     <div class="hero-eyebrow">Research · Aotearoa New Zealand · 2026</div>
-    <h1 class="hero-headline">
-      AI is changing<br>every job.<br>
-      <em>For comms, it hits differently.</em>
-    </h1>
-    <p class="hero-sub">
-      You're not new to disruption. But generative AI isn't changing how you do the work — it's producing the work itself. The writing. The tone. The craft. I want to understand what that actually feels like, from the inside.
-    </p>
-    <div class="btn-row">
-      <a href="get-involved.html" class="btn-gold">Get involved →</a>
-      <a href="#argument" class="btn-ghost">Why this matters</a>
+    <h1 class="hero-headline">When work changes,<br><em>who are we?</em></h1>
+    <p class="hero-sub">AI is changing what we do. I'm here to ask what that does to who we are.</p>
+    <p style="font-size:.85rem;color:var(--w45);font-weight:300;max-width:560px;line-height:1.7">Exploring how AI is shifting the future of work for communications professionals in New Zealand. A 40-week research study on career transition and identity.</p>
+    <div class="btn-row" style="margin-top:2.5rem">
+      <a href="get-involved.html" class="btn-gold">Share your story</a>
+      <a href="proposal.html" class="btn-ghost">Read the research</a>
     </div>
   </div>
 </section>
 
-<div class="stats">
-  <div class="stats-inner">
-    <div class="stat reveal">
-      <div class="stat-num">40%</div>
-      <div class="stat-text">of jobs globally face meaningful exposure to AI — rising to 60% in high-income countries like Aotearoa</div>
-      <div class="stat-source">IMF, 2024</div>
-    </div>
-    <div class="stat reveal reveal-d1">
-      <div class="stat-num">53%</div>
-      <div class="stat-text">of New Zealand organisations report roles removed entirely due to AI — among the highest rates globally</div>
-      <div class="stat-source">IDC / Deel, 2025</div>
-    </div>
-    <div class="stat reveal reveal-d2">
-      <div class="stat-num">2×</div>
-      <div class="stat-text">AI-related role changes in NZ organisations have more than doubled — from 7% in 2023 to 18% in 2025</div>
-      <div class="stat-source">Beyond Recruitment, 2025</div>
-    </div>
-  </div>
-</div>
-
-<section class="section" id="argument" style="background:var(--black)">
+<section class="section" style="background:var(--black-soft);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border)">
   <div class="section-inner">
-    <div class="section-label reveal">What's happening</div>
-    <h2 class="section-heading reveal">This disruption is <em>different.</em></h2>
-    <div class="arg-grid">
-      <div class="arg-block reveal">
-        <div class="arg-accent"></div>
-        <div class="arg-num">01</div>
-        <h3 class="arg-title">AI is moving up the skills ladder, not just the bottom of it.</h3>
-        <p class="arg-body">Previous waves of automation displaced hands. This one displaces minds. For the first time, the jobs most exposed are knowledge work, creative work, professional expertise. The IMF calls it one of the most significant labour market shifts in modern history.</p>
-      </div>
-      <div class="arg-block reveal reveal-d1">
-        <div class="arg-accent"></div>
-        <div class="arg-num">02</div>
-        <h3 class="arg-title">The economic story misses the real damage.</h3>
-        <p class="arg-body">We count jobs lost and created. We track productivity. What we don't measure is what happens to a person's sense of self when the work that made them who they are starts to change — not through redundancy, but through slow, task-by-task encroachment. That damage starts well before any formal change.</p>
-      </div>
-      <div class="arg-block reveal">
-        <div class="arg-accent"></div>
-        <div class="arg-num">03</div>
-        <h3 class="arg-title">Communications professionals are at the sharpest edge.</h3>
-        <p class="arg-body">Writing. Editing. Content strategy. PR. Policy. Editorial. These roles are built on language and authorship — the craft of shaping how stories get told. That is exactly what generative AI now produces. For other professions, AI assists. For communications professionals, AI is producing the very output their identity is built on.</p>
-      </div>
-      <div class="arg-block reveal reveal-d1">
-        <div class="arg-accent"></div>
-        <div class="arg-num">04</div>
-        <h3 class="arg-title">There's a gap in what's being studied.</h3>
-        <p class="arg-body">Workforce researchers are asking: how many jobs are at risk? How do we reskill people? Those are the right questions and they're being worked on. What isn't being studied is what this does to people on the inside — the moment you start wondering whether what you bring still matters. That gap is what this research is here to fill.</p>
-      </div>
+    <div class="section-label reveal">The problem</div>
+    <h2 class="fracture-heading reveal">The fracture happens before<br><em>the role disappears.</em></h2>
+    <p class="body-text reveal">Most conversations about the future of work focus on productivity, reskilling, and new tools. But for those of us who have built a career on the craft of language, the shift is much deeper.</p>
+    <p class="body-text reveal reveal-d1">Generative AI does not just change our tasks. It targets the very capabilities that define our expertise, our voice, our judgment, and our ability to shape meaning. When a machine can mimic your professional superpower, it triggers a quiet erosion of confidence. It is the question that keeps you up at night: does what I do still matter?</p>
+    <div class="stat-callout reveal reveal-d2">
+      <strong>87% of New Zealand organisations</strong> said roles changed or disappeared due to AI in the last year alone. Aotearoa is a small place. When something shifts in a profession here, everyone in it feels it.
+      <div style="font-size:.65rem;color:var(--w20);margin-top:.5rem;letter-spacing:.05em;text-transform:uppercase">IDC / Deel AI at Work Report, 2025</div>
     </div>
   </div>
 </section>
-
-<div class="quote-section">
-  <svg style="display:block;margin:0 auto 2.5rem" width="100" height="48" viewBox="0 0 100 48" fill="none">
-    <path d="M8 40 Q25 15 50 24 Q75 33 92 8" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none"/>
-    <path d="M8 40 Q25 15 50 24 Q75 33 92 8" stroke="#D4A847" stroke-width="1.5" fill="none" stroke-dasharray="6 70" stroke-dashoffset="-15" opacity="0.6"/>
-    <circle cx="50" cy="24" r="3" fill="#D4A847" opacity="0.45"/>
-  </svg>
-  <blockquote class="pull-quote reveal">
-    "I want to understand where people feel <em>the fracture</em> — and what helps make the transition more whole."
-  </blockquote>
-  <p class="pull-attr">— Neha Bhardwaj, Researcher</p>
-</div>
 
 <section class="section" style="background:var(--black)">
   <div class="section-inner">
-    <div class="section-label reveal">Aotearoa New Zealand</div>
-    <h2 class="section-heading reveal">Why here, <em>why now.</em></h2>
-    <div class="nz-grid">
-      <div>
-        <p class="body-text reveal">New Zealand is a small place. When something shifts in a profession here, everyone in it feels it quickly — and there are fewer places to move to.</p>
-        <p class="body-text reveal reveal-d1" style="margin-top:1.2rem">In 2025, New Zealand was among the countries with the highest rates of AI-related job displacement globally. 87% of NZ organisations surveyed said roles changed or disappeared due to AI in the last year alone. Unlike larger economies, there are fewer buffers here — fewer industries to move into, smaller professional networks to lean on.</p>
-        <p class="body-text reveal reveal-d2" style="margin-top:1.2rem">This research is set in Aotearoa because the people going through this here deserve research that reflects their actual experience — not data extrapolated from the US or UK.</p>
-        <div style="margin-top:2.5rem" class="reveal">
-          <a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener" class="btn-ghost">Read the full research proposal →</a>
-        </div>
-      </div>
-      <div class="reveal reveal-d1">
-        <div class="nz-stat-large">87%</div>
-        <p class="nz-stat-label">of NZ organisations said roles changed or disappeared due to AI in the last year</p>
-        <div class="nz-stat-source">IDC / Deel AI at Work Report, 2025</div>
-        <hr class="nz-divider">
-        <div class="nz-stat-large" style="font-size:clamp(3rem,6vw,5rem)">76%</div>
-        <p class="nz-stat-label">of NZ organisations say junior employees have fewer development opportunities — highest of any country surveyed</p>
-        <div class="nz-stat-source">IDC / Deel AI at Work Report, 2025</div>
-      </div>
+    <div class="section-label reveal">The mission</div>
+    <h2 class="section-heading reveal">A 40-week study into<br><em>the human side of AI.</em></h2>
+    <p class="body-text reveal">I am conducting a practice-based research study in Aotearoa to understand how mid-career communications professionals are navigating this exact transition.</p>
+    <p class="body-text reveal reveal-d1">By studying the subjective, human experience of this shift, not just the economics of job displacement, we can build more compassionate, human-centric ways to lead people through the next era of work.</p>
+
+    <div class="voice-block reveal">
+      <p>I have been part of too many restructures. Long before any announcement is made, the uncertainty starts to break a person's sense of self. With AI, that is going to be much bigger.</p>
+      <p>I want to understand that lived experience. Where do people feel the fracture, and what helps make the transition more whole? If I can learn that, I can help make change better and more human.</p>
+      <div class="voice-attr">Neha Bhardwaj, Researcher</div>
+    </div>
+
+    <div class="btn-row reveal" style="margin-top:2rem">
+      <a href="get-involved.html" class="btn-gold">Share your story</a>
+      <a href="about.html" class="btn-ghost">About the researcher</a>
     </div>
   </div>
 </section>
-
-<section class="section gap-section">
-  <div class="section-inner">
-    <div class="section-label reveal">The research</div>
-    <h2 class="section-heading reveal">Going deeper than <em>the numbers.</em></h2>
-    <p class="body-text reveal">Reskilling and reemployment matter. Economic impact matters. That research is being done and it's important.</p>
-    <blockquote class="gap-callout reveal">
-      What isn't being studied is what this does to people on the inside — the slow erosion of confidence, the question you can't easily ask your manager: <em>who am I at work now?</em>
-    </blockquote>
-    <p class="body-text reveal">This study focuses on communications professionals in Aotearoa — people whose craft is language and authorship, which is exactly what AI now produces. Through in-depth conversations, it asks: where does the fracture start? What helps people find their footing again? And what would a better-supported transition actually look like?</p>
-    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap" class="reveal">
-      <a href="get-involved.html" class="btn-gold">Take part in the research →</a>
-      <a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener" class="btn-ghost">Read the proposal</a>
-    </div>
-  </div>
-</section>
-
-<div class="cta-section">
-  <h2 class="cta-heading reveal">If you work in communications<br>and AI is reshaping your work —</h2>
-  <p class="cta-sub reveal">I'd like to talk to you. One conversation. Your story, in your words.</p>
-  <div class="cta-buttons reveal">
-    <a href="get-involved.html" class="btn-gold">Get involved →</a>
-    <a href="resources.html" class="btn-ghost">Read the research</a>
-  </div>
-</div>
 
 <footer>
   <div class="footer-inner">
@@ -318,28 +97,21 @@ footer{background:var(--black-soft);border-top:1px solid var(--black-border);pad
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">Research Proposal ↗</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="proposal.html">The Research</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact">
-        <a href="mailto:neha@whenworkchanges.co.nz">neha@whenworkchanges.co.nz</a><br><br>
+        <a href="mailto:neha@whenworkchanges.com">neha@whenworkchanges.com</a><br><br>
         Ethics approval: AcademyEX<br>
         Guided by Te Tiriti o Waitangi principles.
       </div>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.co.nz · Aotearoa New Zealand</div>
+  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.com · Aotearoa New Zealand</div>
 </footer>
-
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60), {passive:true});
-  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
 <script src="js/main.js"></script>
 </body>
 </html>

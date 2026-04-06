@@ -3,132 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research Proposal | When Work Changes</title>
-<meta name="description" content="Reinventing the Self: Who Am I When My Work Isn't Mine Anymore? The full research proposal by Neha Bhardwaj, AcademyEX Masters of Technological Futures.">
+<title>The Research | When Work Changes</title>
+<meta name="description" content="A deep dive into the methodology and purpose of studying AI-driven professional identity disruption in Aotearoa NZ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 <style>
-:root{
-  --black:#111111;--black-soft:#181818;--black-card:#1e1e1e;--black-border:#2a2a2a;
-  --gold:#D4A847;--gold-pale:rgba(212,168,71,0.07);--gold-line:rgba(212,168,71,0.3);
-  --white:#ffffff;--white-70:rgba(255,255,255,0.7);--white-45:rgba(255,255,255,0.45);--white-20:rgba(255,255,255,0.2)
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(17,17,17,.95);border-bottom:1px solid var(--black-border);backdrop-filter:blur(16px)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.03em}
-.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
-.nav-links a{color:var(--white-45);text-decoration:none;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{color:var(--gold)!important;border:1px solid var(--gold-line)!important;padding:.45rem 1.1rem;transition:background .2s,color .2s!important}
-.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important}
-
-.page-hero{background:var(--black-soft);border-bottom:1px solid var(--black-border);padding:9rem 3rem 4rem;position:relative;overflow:hidden}
-.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.page-hero-inner{max-width:760px}
-.page-label{font-size:.72rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
-.page-label::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
-.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:400;line-height:1.15;margin-bottom:1rem;color:var(--white)}
-.page-title em{color:var(--gold);font-style:italic}
-.page-sub{font-size:.95rem;color:var(--white-45);line-height:1.75;font-weight:300;max-width:560px}
-
-/* EMBED SECTION */
-.embed-section{padding:4rem 3rem 6rem}
-.embed-inner{max-width:1000px;margin:0 auto}
-
-.embed-meta{display:flex;gap:3rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--black-border)}
+.meta-row{display:flex;gap:3rem;flex-wrap:wrap;margin:2.5rem 0;padding:2rem 0;border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border)}
 .meta-item{}
 .meta-label{font-size:.65rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-weight:400;margin-bottom:.4rem}
-.meta-value{font-size:.88rem;color:var(--white-45);font-weight:300}
-
-.gamma-embed-wrap{
-  width:100%;
-  border:1px solid var(--black-border);
-  overflow:hidden;
-  background:var(--black-card);
-  position:relative;
-}
-.gamma-embed-wrap iframe{
-  display:block;
-  width:100%;
-  height:700px;
-  border:none;
-}
-
-.embed-note{
-  margin-top:1.5rem;
-  font-size:.78rem;
-  color:var(--white-20);
-  font-weight:300;
-  text-align:center;
-}
-.embed-note a{color:var(--gold);text-decoration:none}
-.embed-note a:hover{text-decoration:underline}
-
-/* BACK SECTION */
-.back-section{padding:4rem 3rem;border-top:1px solid var(--black-border);background:var(--black-soft)}
-.back-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-.back-text{font-size:.9rem;color:var(--white-45);font-weight:300}
-.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--black);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:background .2s,transform .2s}
-.btn-gold:hover{background:#e0b852;transform:translateX(3px)}
-.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;transition:border-color .2s,background .2s}
-.btn-ghost:hover{border-color:var(--gold);background:var(--gold-pale)}
-
-footer{background:var(--black-soft);border-top:1px solid var(--black-border);padding:4rem 3rem 2.5rem}
-.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--black-border)}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;display:block;text-decoration:none}
-.footer-tag{font-size:.82rem;color:var(--white-20);line-height:1.7;font-weight:300;max-width:300px}
-.footer-col-title{font-size:.68rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:400}
-.footer-links{list-style:none}
-.footer-links li+li{margin-top:.6rem}
-.footer-links a{color:var(--white-45);text-decoration:none;font-size:.85rem;font-weight:300;transition:color .2s}
-.footer-links a:hover{color:var(--gold)}
-.footer-contact{font-size:.85rem;color:var(--white-45);line-height:1.8;font-weight:300}
-.footer-contact a{color:var(--gold);text-decoration:none}
-.footer-bottom{max-width:1100px;margin:2rem auto 0;text-align:center;font-size:.7rem;color:var(--white-20);font-weight:300;letter-spacing:.04em}
-
+.meta-value{font-size:.88rem;color:var(--w45);font-weight:300}
+.gamma-wrap{width:100%;border:1px solid var(--black-border);overflow:hidden;background:var(--black-card);margin-top:2rem}
+.gamma-wrap iframe{display:block;width:100%;height:680px;border:none}
+.fallback-note{font-size:.75rem;color:var(--w20);margin-top:1rem;text-align:center;font-weight:300}
+.fallback-note a{color:var(--gold);text-decoration:none}
 @media(max-width:768px){
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .page-hero{padding:7rem 1.5rem 3rem}
-  .embed-section{padding:3rem 1.5rem 4rem}
-  .embed-meta{flex-direction:column;gap:1.5rem}
-  .gamma-embed-wrap iframe{height:500px}
-  .back-section{padding:3rem 1.5rem}
-  .back-inner{flex-direction:column;align-items:flex-start}
-  .footer-inner{grid-template-columns:1fr;gap:2rem}
+  .meta-row{flex-direction:column;gap:1.5rem}
+  .gamma-wrap iframe{height:460px}
 }
 </style>
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<nav>
+<nav class="solid" id="nav">
   <a href="index.html" class="nav-logo">When Work Changes</a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="get-involved.html">Get Involved</a></li>
-    <li><a href="resources.html">Resources</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="proposal.html" class="active">The Research</a></li>
-    <li><a href="get-involved.html" class="nav-cta">Participate →</a></li>
+    <li><a href="get-involved.html" class="nav-cta">Participate</a></li>
   </ul>
 </nav>
 
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="page-label">Masters research proposal</div>
-    <h1 class="page-title">Reinventing the Self:<br><em>Who Am I When My Work Isn't Mine Anymore?</em></h1>
-    <p class="page-sub">The full research proposal submitted to AcademyEX. Professional identity disruption and repair during AI-driven role change in Aotearoa.</p>
+    <div class="page-label">The research</div>
+    <h1 class="page-title">Beyond the<br><em>objective career.</em></h1>
+    <p class="page-sub">Why rebuilding who we are matters as much as securing what we do next.</p>
   </div>
 </div>
 
-<section class="embed-section">
-  <div class="embed-inner">
+<!-- CONTEXT -->
+<section class="section" style="background:var(--black)">
+  <div class="section-inner">
+    <div class="section-label reveal">The context</div>
+    <h2 class="section-heading reveal">Reskilling addresses the objective career.<br><em>This research goes deeper.</em></h2>
+    <p class="body-text reveal">Global forecasts predict that 92 million roles will be displaced by 2030. In response, corporate support systems focus heavily on reskilling and reemployment.</p>
+    <p class="body-text reveal reveal-d1">But reskilling only addresses the objective career: skills, employability, and job placement. Beneath that sits the subjective career: how people actually experience meaning, continuity, and self-worth during forced transitions.</p>
+    <p class="body-text reveal reveal-d2">In Aotearoa New Zealand, our small labour market offers limited professional mobility, making these transitions even more acutely felt. This practice-based research project aims to bridge the gap between technological transformation and human support. By capturing the lived experiences of Aotearoa's communications professionals, the goal is to develop a validated, practical framework that coaches, leaders, and individuals can use to navigate identity repair during AI-driven change.</p>
+  </div>
+</section>
 
-    <div class="embed-meta">
+<!-- PROPOSAL EMBED -->
+<section class="section" style="background:var(--black-soft);border-top:1px solid var(--black-border)">
+  <div class="section-inner">
+    <div class="section-label reveal">Full research proposal</div>
+    <h2 class="section-heading reveal">Reinventing the Self: Who Am I When<br><em>My Work Isn't Mine Anymore?</em></h2>
+    <p class="body-text reveal">The complete research proposal submitted to AcademyEX. Professional identity disruption and repair during AI-driven role change in Aotearoa.</p>
+
+    <div class="meta-row reveal">
       <div class="meta-item">
         <div class="meta-label">Researcher</div>
         <div class="meta-value">Neha Bhardwaj</div>
@@ -143,35 +77,32 @@ footer{background:var(--black-soft);border-top:1px solid var(--black-border);pad
       </div>
       <div class="meta-item">
         <div class="meta-label">Status</div>
-        <div class="meta-value">Ethics approved — fieldwork underway 2026</div>
+        <div class="meta-value">Ethics approved · Fieldwork underway 2026</div>
       </div>
     </div>
 
-    <div class="gamma-embed-wrap">
+    <div class="gamma-wrap reveal">
       <iframe
         src="https://gamma.app/embed/pzm99rw1ei0zgey"
-        style="width:700px;max-width:100%;height:450px"
         allow="fullscreen"
-        title="Summative Assessment 3: Research Proposal">
+        title="Reinventing the Self: Research Proposal by Neha Bhardwaj">
       </iframe>
     </div>
-
-    <p class="embed-note">
-      Having trouble viewing? <a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">Open the proposal directly on Gamma ↗</a>
-    </p>
-
+    <p class="fallback-note">Having trouble viewing? <a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">Open directly on Gamma</a></p>
   </div>
 </section>
 
-<div class="back-section">
-  <div class="back-inner">
-    <p class="back-text">Ready to take part in the research?</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap">
-      <a href="get-involved.html" class="btn-gold">Get involved →</a>
-      <a href="resources.html" class="btn-ghost">Reading list</a>
+<!-- CTA -->
+<section class="section" style="background:var(--black);border-top:1px solid var(--black-border)">
+  <div class="section-inner">
+    <h2 class="section-heading reveal">Want to be part of <em>the research?</em></h2>
+    <p class="body-text reveal">If you're a communications professional in Aotearoa and this resonates, I'd love to talk to you.</p>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap" class="reveal">
+      <a href="get-involved.html" class="btn-gold">Get involved</a>
+      <a href="about.html" class="btn-ghost">About the researcher</a>
     </div>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="footer-inner">
@@ -184,22 +115,21 @@ footer{background:var(--black-soft);border-top:1px solid var(--black-border);pad
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="proposal.html">Research Proposal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="proposal.html">The Research</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact">
-        <a href="mailto:neha@whenworkchanges.co.nz">neha@whenworkchanges.co.nz</a><br><br>
+        <a href="mailto:neha@whenworkchanges.com">neha@whenworkchanges.com</a><br><br>
         Ethics approval: AcademyEX<br>
         Guided by Te Tiriti o Waitangi principles.
       </div>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.co.nz · Aotearoa New Zealand</div>
+  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.com · Aotearoa New Zealand</div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
