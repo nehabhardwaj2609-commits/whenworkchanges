@@ -1,0 +1,6 @@
+Add your photo here named: neha.jpg
+
+Then update the img src in get-involved.html from:
+  src="neha.jpg"
+to:
+  src="images/neha.jpg"

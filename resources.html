@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | When Work Changes</title>
+<meta name="description" content="Six pieces worth reading if you want to understand what AI is doing to professional identity — and why it matters beyond the headlines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#111111;--black-soft:#181818;--black-card:#1e1e1e;--black-border:#2a2a2a;
+  --gold:#D4A847;--gold-pale:rgba(212,168,71,0.07);--gold-line:rgba(212,168,71,0.3);
+  --white:#ffffff;--white-70:rgba(255,255,255,0.7);--white-45:rgba(255,255,255,0.45);--white-20:rgba(255,255,255,0.2)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(17,17,17,.95);border-bottom:1px solid var(--black-border);backdrop-filter:blur(16px)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.03em}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{color:var(--white-45);text-decoration:none;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{color:var(--gold)!important;border:1px solid var(--gold-line)!important;padding:.45rem 1.1rem;transition:background .2s,color .2s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important}
+
+.page-hero{background:var(--black-soft);border-bottom:1px solid var(--black-border);padding:9rem 3rem 6rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.page-hero-inner{max-width:760px}
+.page-label{font-size:.72rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
+.page-label::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;color:var(--white)}
+.page-title em{color:var(--gold);font-style:italic}
+.page-sub{font-size:1.05rem;color:var(--white-70);line-height:1.75;font-weight:300;max-width:560px}
+
+.section{padding:6rem 3rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:.7rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
+.section-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.section-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;line-height:1.2;margin-bottom:.6rem;color:var(--white)}
+.section-heading em{color:var(--gold);font-style:italic}
+.section-sub{font-size:.9rem;color:var(--white-20);line-height:1.7;font-weight:300;margin-bottom:3.5rem;max-width:560px}
+.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--black);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:background .2s,transform .2s}
+.btn-gold:hover{background:#e0b852;transform:translateX(3px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;transition:border-color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--gold);background:var(--gold-pale)}
+
+/* RESOURCE CARDS */
+.reading-section{background:var(--black)}
+.resources-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--black-border)}
+.resource-card{background:var(--black);padding:2.5rem;display:flex;flex-direction:column;gap:.8rem;position:relative;transition:background .2s;overflow:hidden}
+.resource-card:hover{background:var(--black-card)}
+.resource-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .4s ease}
+.resource-card:hover::before{transform:scaleY(1)}
+.resource-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--black-border);font-weight:600;line-height:1;transition:color .2s}
+.resource-card:hover .resource-num{color:var(--gold-line)}
+.resource-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--white);line-height:1.3;font-weight:400}
+.resource-author{font-size:.75rem;color:var(--white-20);font-style:italic;font-weight:300}
+.resource-why{font-size:.88rem;color:var(--white-45);line-height:1.75;font-weight:300;flex:1}
+.resource-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--gold);text-decoration:none;font-weight:400;letter-spacing:.05em;margin-top:.3rem;transition:gap .2s}
+.resource-link:hover{gap:.7rem}
+
+/* BLOG */
+.blog-section{background:var(--black-soft);border-top:1px solid var(--black-border)}
+.blog-placeholder{border:1px solid var(--black-border);padding:4rem 3rem;text-align:center;max-width:580px;margin:0 auto;background:var(--black-card)}
+.blog-placeholder-icon{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--black-border);margin-bottom:1rem;display:block}
+.blog-placeholder-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--white-45);margin-bottom:.8rem}
+.blog-placeholder-body{font-size:.88rem;color:var(--white-20);line-height:1.7;font-weight:300;margin-bottom:2rem}
+
+footer{background:var(--black-soft);border-top:1px solid var(--black-border);padding:4rem 3rem 2.5rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--black-border)}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;display:block;text-decoration:none}
+.footer-tag{font-size:.82rem;color:var(--white-20);line-height:1.7;font-weight:300;max-width:300px}
+.footer-col-title{font-size:.68rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:400}
+.footer-links{list-style:none}
+.footer-links li+li{margin-top:.6rem}
+.footer-links a{color:var(--white-45);text-decoration:none;font-size:.85rem;font-weight:300;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact{font-size:.85rem;color:var(--white-45);line-height:1.8;font-weight:300}
+.footer-contact a{color:var(--gold);text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;text-align:center;font-size:.7rem;color:var(--white-20);font-weight:300;letter-spacing:.04em}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .section{padding:4rem 1.5rem}
+  .page-hero{padding:7rem 1.5rem 4rem}
+  .resources-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">When Work Changes</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+    <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">The Research</a></li>
+    <li><a href="get-involved.html" class="nav-cta">Participate →</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Reading list & writing</div>
+    <h1 class="page-title">The research that<br><em>shapes this work.</em></h1>
+    <p class="page-sub">Six pieces worth reading if you want to understand what's happening — and why it matters beyond the headlines. Plus writing from Neha as the research progresses.</p>
+  </div>
+</div>
+
+<section class="section reading-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Reading list</div>
+    <h2 class="section-heading reveal">Six pieces <em>worth your time.</em></h2>
+    <p class="section-sub reveal">Chosen because each one says something true — and because they might give language to something you've been feeling.</p>
+
+    <div class="resources-grid">
+      <div class="resource-card reveal">
+        <div class="resource-num">01</div>
+        <div class="resource-title">A World Without Work</div>
+        <div class="resource-author">Daniel Susskind — 2020</div>
+        <p class="resource-why">The most important book on AI and employment of recent years. Susskind introduces the concept of "task encroachment" — the slow, relentless process by which machines take on more and more of what humans do. His argument: this time really is different. And the identity mismatch — when available jobs don't match who people feel they are — is one of the least-discussed but most damaging consequences.</p>
+        <a href="https://www.danielsusskind.com/a-world-without-work" target="_blank" rel="noopener" class="resource-link">Find out more →</a>
+      </div>
+
+      <div class="resource-card reveal reveal-d1">
+        <div class="resource-num">02</div>
+        <div class="resource-title">Artificial Intelligence and the Future of Work: A Functional-Identity Perspective</div>
+        <div class="resource-author">Selenko, Bankins, Shoss et al. — 2022</div>
+        <p class="resource-why">The first major framework for understanding what AI does to people's sense of self at work — not just their employment status. Whether AI threatens or expands a worker's identity depends on how it's deployed and which tasks it takes over. Essential reading for HR practitioners and coaches who want to understand what's actually happening to people.</p>
+        <a href="https://doi.org/10.1177/09637214221091823" target="_blank" rel="noopener" class="resource-link">Read the paper →</a>
+      </div>
+
+      <div class="resource-card reveal">
+        <div class="resource-num">03</div>
+        <div class="resource-title">What Generative AI Means for the Media Industries</div>
+        <div class="resource-author">Guzman & Lewis — 2024</div>
+        <p class="resource-why">Why communications professionals specifically? Guzman and Lewis make the case that generative AI is different from previous technologies because it steps into the creator role — producing the content that media and comms professionals have always defined themselves by. The disruption is not to the tools. It is to the identity of the profession itself.</p>
+        <a href="https://doi.org/10.1177/27523543241289239" target="_blank" rel="noopener" class="resource-link">Read the paper →</a>
+      </div>
+
+      <div class="resource-card reveal reveal-d1">
+        <div class="resource-num">04</div>
+        <div class="resource-title">Job Insecurity and Its Consequences: Addressing Unanswered Questions</div>
+        <div class="resource-author">Selenko, Mäkikangas & Stride — 2013</div>
+        <p class="resource-why">A finding most people miss: job insecurity alone — before any actual job loss — is enough to undermine professional self-concept. The psychological damage doesn't wait for a redundancy notice. If you've felt it before anything formal happened, this paper names why — and why it's real, not just anxiety.</p>
+        <a href="https://doi.org/10.1080/1359432X.2013.810795" target="_blank" rel="noopener" class="resource-link">Read the paper →</a>
+      </div>
+
+      <div class="resource-card reveal">
+        <div class="resource-num">05</div>
+        <div class="resource-title">Working Identity: Unconventional Strategies for Reinventing Your Career</div>
+        <div class="resource-author">Herminia Ibarra — 2003</div>
+        <p class="resource-why">Ibarra's foundational work on career transition and identity. Her central insight — that identity change requires acting first and reflecting later, through "provisional selves" — is directly relevant to anyone navigating a major professional shift. Practical, readable, and grounded in real stories. Still the most useful book on what reinvention actually looks like from the inside.</p>
+        <a href="https://herminiaibarra.com/books/working-identity/" target="_blank" rel="noopener" class="resource-link">Find out more →</a>
+      </div>
+
+      <div class="resource-card reveal reveal-d1">
+        <div class="resource-num">06</div>
+        <div class="resource-title">Anticipatory AI-Related Distress (AIRD): Emerging Evidence and Implications</div>
+        <div class="resource-author">McNamara & Thornton — 2025</div>
+        <p class="resource-why">Brand new research naming something many people are already experiencing but lack language for: anticipatory distress about what AI might do to their career, before anything has formally changed. If you've felt anxious about your professional future in ways that are hard to explain to your manager — this research describes why it's legitimate, and why it matters.</p>
+        <a href="https://scholar.google.com/scholar?q=McNamara+Thornton+2025+AIRD+anticipatory+AI" target="_blank" rel="noopener" class="resource-link">Search Google Scholar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section blog-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Writing</div>
+    <h2 class="section-heading reveal">From the <em>researcher's desk.</em></h2>
+    <p class="section-sub reveal">Reflections on the research as it unfolds, and broader thinking on AI, work, and what better looks like. Published fortnightly on Substack.</p>
+
+    <div class="blog-placeholder reveal">
+      <span class="blog-placeholder-icon">✦</span>
+      <div class="blog-placeholder-title">Writing starts here — coming in 2026.</div>
+      <p class="blog-placeholder-body">As the research progresses, Neha will write here about what she's finding, noticing, and thinking about — and about the broader questions of AI, work, and how we build more human transitions for people navigating this shift. Subscribe to get it in your inbox.</p>
+      <a href="https://substack.com/@whenworkchanges" target="_blank" rel="noopener" class="btn-ghost">Subscribe on Substack →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">When Work Changes</a>
+      <p class="footer-tag">Research into professional identity and AI-driven role change in Aotearoa New Zealand. Masters of Technological Futures, AcademyEX, Generation 27.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">Research Proposal ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        <a href="mailto:neha@whenworkchanges.co.nz">neha@whenworkchanges.co.nz</a><br><br>
+        Ethics approval: AcademyEX<br>
+        Guided by Te Tiriti o Waitangi principles.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.co.nz · Aotearoa New Zealand</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

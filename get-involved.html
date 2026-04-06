@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Involved | When Work Changes</title>
+<meta name="description" content="Participate in research into professional identity and AI-driven role change in Aotearoa. Mid-career communications professionals wanted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#111111;--black-soft:#181818;--black-card:#1e1e1e;--black-border:#2a2a2a;
+  --gold:#D4A847;--gold-dim:#a07d2a;--gold-pale:rgba(212,168,71,0.07);--gold-line:rgba(212,168,71,0.3);
+  --white:#ffffff;--white-70:rgba(255,255,255,0.7);--white-45:rgba(255,255,255,0.45);--white-20:rgba(255,255,255,0.2)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(17,17,17,.95);border-bottom:1px solid var(--black-border);backdrop-filter:blur(16px)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:.03em}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{color:var(--white-45);text-decoration:none;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{color:var(--gold)!important;border:1px solid var(--gold-line)!important;padding:.45rem 1.1rem;transition:background .2s,color .2s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important}
+
+/* PAGE HERO */
+.page-hero{background:var(--black-soft);border-bottom:1px solid var(--black-border);padding:9rem 3rem 6rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.page-hero-inner{max-width:760px}
+.page-label{font-size:.72rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
+.page-label::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;color:var(--white)}
+.page-title em{color:var(--gold);font-style:italic}
+.page-sub{font-size:1.05rem;color:var(--white-70);line-height:1.75;font-weight:300;max-width:560px}
+
+/* SHARED */
+.section{padding:6rem 3rem}
+.section-inner{max-width:1000px;margin:0 auto}
+.section-label{font-size:.7rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
+.section-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.section-heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;line-height:1.2;margin-bottom:1.5rem;color:var(--white)}
+.section-heading em{color:var(--gold);font-style:italic}
+.body-text{font-size:1rem;color:var(--white-70);line-height:1.8;font-weight:300;max-width:640px}
+.body-text+.body-text{margin-top:1.2rem}
+.body-text strong{color:var(--white);font-weight:500}
+.body-text em{color:var(--white);font-style:italic}
+.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--black);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:background .2s,transform .2s}
+.btn-gold:hover{background:#e0b852;transform:translateX(3px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;padding:.9rem 2rem;font-size:.82rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;transition:border-color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--gold);background:var(--gold-pale)}
+
+/* CRITERIA */
+.criteria-section{background:var(--black)}
+.criteria-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--black-border);margin-top:3rem}
+.criteria-card{background:var(--black);padding:2.5rem 2rem;position:relative;transition:background .2s;overflow:hidden}
+.criteria-card:hover{background:var(--black-card)}
+.criteria-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.criteria-card:hover::after{transform:scaleX(1)}
+.criteria-icon{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold);line-height:1;margin-bottom:1rem}
+.criteria-title{font-size:.78rem;font-weight:500;color:var(--white-45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
+.criteria-body{font-size:.9rem;color:var(--white-45);line-height:1.7;font-weight:300}
+.criteria-note{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--gold);margin-top:3rem;opacity:.8}
+
+/* VIDEO PLACEHOLDER */
+.video-section{background:var(--black-soft);border-top:1px solid var(--black-border);border-bottom:1px solid var(--black-border)}
+.video-placeholder{background:var(--black-card);border:1px solid var(--black-border);aspect-ratio:16/9;max-width:720px;margin:2.5rem auto 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+.video-play-icon{width:60px;height:60px;border:2px solid var(--gold-line);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.2rem;transition:border-color .2s,background .2s}
+.video-placeholder:hover .video-play-icon{border-color:var(--gold);background:var(--gold-pale)}
+.video-label{font-size:.8rem;color:var(--white-20);letter-spacing:.1em;text-transform:uppercase}
+/* To add YouTube: replace .video-placeholder div with <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_ID" frameborder="0" allowfullscreen></iframe> */
+
+/* ABOUT */
+.about-section{background:var(--black)}
+.about-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:5rem;align-items:start;margin-top:3rem}
+.about-photo-wrap{position:relative}
+.about-photo{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center top;display:block;border:1px solid var(--black-border);filter:grayscale(20%)}
+.about-photo-caption{text-align:center;margin-top:1.2rem;font-size:.8rem;color:var(--white-20);font-weight:300;line-height:1.6}
+.about-photo-caption strong{color:var(--gold);font-weight:400;display:block;font-family:'Cormorant Garamond',serif;font-size:1rem}
+
+/* INVOLVEMENT */
+.involvement-section{background:var(--black-soft);border-top:1px solid var(--black-border)}
+.steps{margin-top:3rem}
+.step{display:grid;grid-template-columns:48px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--black-border);align-items:start}
+.step:last-child{border-bottom:none}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:600;line-height:1;opacity:.6}
+.step-title{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:.4rem}
+.step-body{font-size:.9rem;color:var(--white-45);line-height:1.7;font-weight:300}
+
+.protection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--black-border);margin-top:3.5rem}
+.protection-item{background:var(--black-soft);padding:2rem;text-align:center}
+.protection-icon{font-size:1.3rem;margin-bottom:.8rem;color:var(--gold);display:block}
+.protection-title{font-size:.72rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;font-weight:400}
+.protection-body{font-size:.82rem;color:var(--white-20);line-height:1.55;font-weight:300}
+
+/* CONTACT */
+.contact-section{background:var(--black)}
+.contact-inner{max-width:600px}
+.contact-email-block{border:1px solid var(--black-border);padding:2.5rem;margin-top:2rem;background:var(--black-card)}
+.contact-email-label{font-size:.7rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;font-weight:400}
+.contact-email-link{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);text-decoration:none;display:block;margin-bottom:.8rem;transition:color .2s}
+.contact-email-link:hover{color:var(--gold)}
+.contact-email-note{font-size:.85rem;color:var(--white-20);line-height:1.6;font-weight:300}
+.contact-formspree-note{font-size:.75rem;color:var(--white-20);margin-top:1.5rem;font-weight:300;font-style:italic}
+
+/* FOOTER */
+footer{background:var(--black-soft);border-top:1px solid var(--black-border);padding:4rem 3rem 2.5rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--black-border)}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;display:block;text-decoration:none}
+.footer-tag{font-size:.82rem;color:var(--white-20);line-height:1.7;font-weight:300;max-width:300px}
+.footer-col-title{font-size:.68rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;font-weight:400}
+.footer-links{list-style:none}
+.footer-links li+li{margin-top:.6rem}
+.footer-links a{color:var(--white-45);text-decoration:none;font-size:.85rem;font-weight:300;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact{font-size:.85rem;color:var(--white-45);line-height:1.8;font-weight:300}
+.footer-contact a{color:var(--gold);text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;text-align:center;font-size:.7rem;color:var(--white-20);font-weight:300;letter-spacing:.04em}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .section{padding:4rem 1.5rem}
+  .page-hero{padding:7rem 1.5rem 4rem}
+  .criteria-grid{grid-template-columns:1fr;gap:0}
+  .criteria-card{border-bottom:1px solid var(--black-border)}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-photo{max-width:220px;margin:0 auto}
+  .protection-grid{grid-template-columns:1fr;gap:0}
+  .protection-item{border-bottom:1px solid var(--black-border)}
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">When Work Changes</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="get-involved.html" class="active">Get Involved</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">The Research</a></li>
+    <li><a href="#contact" class="nav-cta">Get in touch →</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Participate in the research</div>
+    <h1 class="page-title">Is this <em>you?</em></h1>
+    <p class="page-sub">Mid-career communications professionals in Aotearoa whose work is changing — or who can feel it starting to. One conversation. Your story, in your words.</p>
+  </div>
+</div>
+
+<!-- CRITERIA -->
+<section class="section criteria-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Who I'm looking for</div>
+    <h2 class="section-heading reveal">You've built your career around <em>the craft of communications.</em></h2>
+    <p class="body-text reveal" style="margin-bottom:0">I'm looking for people who've spent 10 or more years in communications — PR, corporate comms, content strategy, editorial, policy writing, marketing comms. People based in Aotearoa whose work has changed in the last two years, or who can feel it starting to. You don't need to have lost your job. You just need to be living inside the change — or the uncertainty of it.</p>
+
+    <div class="criteria-grid">
+      <div class="criteria-card reveal">
+        <div class="criteria-icon">10+</div>
+        <div class="criteria-title">Years of experience</div>
+        <p class="criteria-body">PR, corporate comms, content strategy, editorial, policy writing, or marketing communications. You've been doing this long enough that it's part of who you are.</p>
+      </div>
+      <div class="criteria-card reveal reveal-d1">
+        <div class="criteria-icon">NZ</div>
+        <div class="criteria-title">Based in Aotearoa</div>
+        <p class="criteria-body">Working in New Zealand, navigating what AI is doing to your professional landscape here — in a small, connected industry where everyone feels the shift.</p>
+      </div>
+      <div class="criteria-card reveal reveal-d2">
+        <div class="criteria-icon">→</div>
+        <div class="criteria-title">Your work is changing</div>
+        <p class="criteria-body">Your role has shifted, tasks have disappeared, a restructure has happened — or you can feel it coming. Any stage of that experience counts.</p>
+      </div>
+    </div>
+    <p class="criteria-note reveal">You care deeply about the communications craft. That matters here.</p>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section video-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Hear from Neha directly</div>
+    <h2 class="section-heading reveal">A short introduction to <em>the research.</em></h2>
+    <div class="video-placeholder reveal">
+      <!-- Replace this div with YouTube embed when video is ready:
+           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen style="display:block"></iframe> -->
+      <div class="video-play-icon">▶</div>
+      <span class="video-label">Video coming shortly</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section">
+  <div class="section-inner">
+    <div class="section-label reveal">About the researcher</div>
+    <h2 class="section-heading reveal">Person first. <em>Researcher second.</em></h2>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <!-- Replace src with your actual photo file -->
+        <img src="neha.jpg" alt="Neha Bhardwaj" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div style="display:none;width:100%;aspect-ratio:1;border-radius:50%;background:var(--black-card);border:1px solid var(--black-border);align-items:center;justify-content:center;font-size:.8rem;color:var(--white-20)">Photo coming soon</div>
+        <div class="about-photo-caption">
+          <strong>Neha Bhardwaj</strong>
+          whenworkchanges.co.nz
+        </div>
+      </div>
+      <div>
+        <p class="body-text reveal">I'm Neha Bhardwaj. I've spent over twenty years in HR, organisational change, and coaching. I've sat in the rooms where restructures get planned. I know what those conversations look like from the inside — and I carry that into this research.</p>
+        <p class="body-text reveal reveal-d1">I chose my own name at age five. Identity has never been abstract to me.</p>
+        <p class="body-text reveal reveal-d2">I'm doing this Masters because I've watched too many people go through change that could have been handled better. With AI, that's going to get much bigger. I want to understand what's really happening to people — so the frameworks, the coaching, the support actually helps.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem"><strong>Masters of Technological Futures, Generation 27 — AcademyEX, Aotearoa New Zealand.</strong><br>Academic advisors: Philippa Smith and Guillem Bonavia.<br>Ethics approval: AcademyEX ethics panel.</p>
+        <div style="margin-top:2rem" class="reveal">
+          <a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener" class="btn-ghost">Read the full research proposal →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INVOLVED -->
+<section class="section involvement-section">
+  <div class="section-inner">
+    <div class="section-label reveal">What participation involves</div>
+    <h2 class="section-heading reveal">One conversation. <em>Your story, in your words.</em></h2>
+    <p class="body-text reveal">No commitment until you decide. No surprises once you do.</p>
+
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">You reach out</div>
+          <div class="step-body">Email me or use the contact below. No commitment — just letting me know you're interested.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">We have a kōrero first</div>
+          <div class="step-body">A short phone call — 15 to 20 minutes — where I explain the research, you can ask any questions, and we can both decide if this feels right. Relationship before data.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">The research conversation</div>
+          <div class="step-body">60 to 90 minutes. Video call or in person — wherever you're comfortable. I'll guide us through, but you lead the story. We'll also use a simple visual journey map together.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">After we talk</div>
+          <div class="step-body">I'll follow up to check in. A small koha is offered as a genuine thank you for your time and trust. You may also be invited to review findings later — entirely your call.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="protection-grid reveal">
+      <div class="protection-item">
+        <span class="protection-icon">◈</span>
+        <div class="protection-title">Fully confidential</div>
+        <div class="protection-body">Nothing you share will be identifiable in any research output</div>
+      </div>
+      <div class="protection-item">
+        <span class="protection-icon">◈</span>
+        <div class="protection-title">Ethics approved</div>
+        <div class="protection-body">Reviewed and approved by the AcademyEX ethics panel</div>
+      </div>
+      <div class="protection-item">
+        <span class="protection-icon">◈</span>
+        <div class="protection-title">Withdraw anytime</div>
+        <div class="protection-body">For any reason, at any point, no questions asked</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div class="section-label reveal">Get in touch</div>
+      <h2 class="section-heading reveal">If this resonates,<br>I'd love to hear from you.</h2>
+      <p class="body-text reveal">No commitment. No pressure. Just a conversation to start. Email me and I'll be in touch within a few days to arrange our kōrero.</p>
+
+      <div class="contact-email-block reveal">
+        <div class="contact-email-label">Send me an email</div>
+        <a href="mailto:neha@whenworkchanges.co.nz?subject=When Work Changes — I'd like to be involved" class="contact-email-link">neha@whenworkchanges.co.nz</a>
+        <p class="contact-email-note">Feel free to share a little about your situation or just say hello. I'll reply within a few days and we'll arrange a time to connect.</p>
+      </div>
+      <p class="contact-formspree-note">A contact form is coming soon. For now, email is the easiest way to reach me.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">When Work Changes</a>
+      <p class="footer-tag">Research into professional identity and AI-driven role change in Aotearoa New Zealand. Masters of Technological Futures, AcademyEX, Generation 27.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="https://gamma.app/docs/Summative-Assessment-3-Research-Proposal-pzm99rw1ei0zgey" target="_blank" rel="noopener">Research Proposal ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        <a href="mailto:neha@whenworkchanges.co.nz">neha@whenworkchanges.co.nz</a><br><br>
+        Ethics approval: AcademyEX<br>
+        Guided by Te Tiriti o Waitangi principles.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Neha Bhardwaj · whenworkchanges.co.nz · Aotearoa New Zealand</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
